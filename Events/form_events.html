@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus Event</title>
+    <style>
+        #name {
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        #email {
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        #country {
+            margin: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="" id="name">Name:</label><input type="text" id="fname" onfocus="focusFunc(this)" onblur="blurFunc(this)"><br>
+        <br>
+        <label for="" id="email">Email </label><input type="email" id="email_id" onfocus="focusFunc(this)" onblur="blurFunc(this)" oninvalid="alert('fill valid email')"><br>
+        <br>
+        <label for="" id="country">Country</label>
+        <select name="" id="" onfocus="focusFunc(this)" >
+            <option value="">India</option>
+            <option value="">Europe</option>
+            <option value="">England</option>
+            <option value="">China</option>
+        </select>
+        <input type="submit">
+    </form>
+    <script>
+        function focusFunc(e){
+            e.style.background="hotpink";
+        }
+        function blurFunc(e){
+            e.style.background="";
+        }
+    </script>
+</body>
+
+</html>
